@@ -52,7 +52,7 @@ body {
 
 .formCont {
   width: 70%;
-  height: 70%;
+  
   display: flex;
   /* justify-content: center; */
   align-items: center;
@@ -103,4 +103,36 @@ body {
   border: 1px solid #937B71;
   background-color:rgba(234, 230, 229, 1);
   /* flex: 1; */
+}
+
+.payment {
+  display:flex;
+  flex-direction: column
+}
+
+.details > label {
+  justify-content: flex-start;
+  align-items:center;
+}
+
+.details > input {
+  justify-content: flex-end
+}
+
+#confirmPayment {
+  width:20%;
+  margin-top: 5%;
+  margin-left:40%;
+  font-size: 15px;
+  border-radius: 10px;
+  border: solid 1px black;
+  background-color: rgba(0,0,0,0);
+  padding: 7px 7px;
+}
+
+#paymentHead{
+  font-weight: bold;
+  text-align: center;
+  font-size: 25px;
+  margin-bottom: 5%;
 }
