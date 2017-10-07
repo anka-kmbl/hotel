@@ -27,6 +27,24 @@ body {
   text-decoration: none;
   color:#EAE6E5;
 }
+.roomInfoDiv {
+  width: 500px;
+  margin: 0;
+  
+}
+.roomsPhotoDiv {
+  /* display: flex;
+  justify-content: center;
+  align-content: center; */
+  width: 200px;
+  margin: 0;
+  display: inline-block;
+}
+.roomsInfoList {
+  align-self: flex-end;
+  display: inline-block;
+}
+
 .header {
   background-image: url(../images/header.jpg);
   background-size: 102% 102%;
@@ -39,11 +57,37 @@ body {
   background-color:#888485;
   margin: 0;
 }
+.photoDiv {
+  align-self: flex-start;
+  width: 200px;
+  margin: 0;
+}
+.photoDiv img {
+  width: 150px;
+  height: 90px;
+}
+img {
+  width: 150px;
+  height: 90px;
+}
+.hotelsPage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.roomsInfoDiv ul {
+  width: 150px;
+  margin: 0;
+}
+.hotelsContainer {
+  width: 600px;
+
+}
 
 .booking {
   width: 100%;
   display: flex;
-  height: 800px;
+  height: auto;
   background-image: url(../images/bookBkgrnd.jpg);
   justify-content: center;
   align-items: center;
@@ -52,7 +96,8 @@ body {
 
 .formCont {
   width: 70%;
-  
+  margin: 40px auto;
+  padding: 30px;
   display: flex;
   /* justify-content: center; */
   align-items: center;
@@ -139,4 +184,8 @@ body {
   text-align: center;
   font-size: 25px;
   margin-bottom: 5%;
+}
+
+.displayNone {
+  display: none;
 }
