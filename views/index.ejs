@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge"> -->
+  <title>Document</title>
+  <link rel="stylesheet" type="text/css" href="stylesheets/style.css">
+</head>
+<body>
+  <div class="header">
+    <div class="nav">
+        <ul>
+          <li><a href="#">Main</a></li>
+          <li><a href="#">About</a>
+          </li>
+        <li><a href="#">Book</a></li>
+        <li><a href="#">Contacts</a></li>
+
+        </ul>
+    </div>
+  </div>
+  <div class="about">
+    <!-- <p>Karolina Spa and Resort</p> -->
+  </div>
+  <div class="booking">
+		
+    <div class="formCont">
+			<div class="stepsDisplay">
+					<div class="step">Выбор даты</div>
+					<div class="step">Выбор номера</div>
+					<div class="step">Оплата</div>
+					<div class="step">Успех</div>
+			</div>
+			<div class="container hotels">
+					<!-- <form action="/api/pickRoom" id="dataForm">
+						<label for="lastName">Фамилия</label>
+						<input type="text" name="lastName" placeholder="Петров" required/><br/>
+						<label for="name">Имя</label>
+						<input type="text" name="name" placeholder="Виталий" required/><br/>
+						<label for="patr">Отчество</label>
+						<input type="text" name="patr" placeholder="Николаевич" required/><br/>
+						
+						<label for="checkIn">Дата заезда</label>
+						<input type="date" name="checkIn" min="2017-10-09" max="2017-12-31" value="2017-10-09" required/><br/>
+						<label for="checkOut">Дата отъезда</label>
+						<input type="date" name="checkOut" min="2017-10-09" max="2017-12-31" value="2017-10-15" required/><br/>
+						<input type="submit" value="Submit"/>
+					</form> -->
+					<div class="filterContainer">
+						<form action="#" id="filterForm">
+						<p>Поиск по критериям:</p>
+						
+						<label for="budget">Ваш бюджет</label>
+						<input type="radio" name="budget" value="до 90$"/> до 90$
+						<input type="radio" name="budget" value="от 90$ до 150$"/ checked> от 90$ до 150$
+						<input type="radio" name="budget" value="от 150$ до 200$"/> от 150$ до 200$
+						<input type="radio" name="budget" value="от 200$ до 400$"/> от 200$ до 400$
+						<input type="radio" name="budget" value="больше 400$"/> больше 400$
+
+						</form>
+					</div>
+					<div class="hotelsContainer"></div>
+			</div>
+      
+			
+			
+    </div>
+  </div>
+
+
+  <div class="footer"></div>
+  <script src="javascripts/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,106 @@
+body {
+  margin: 0;
+  padding: 0
+}
+.nav {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  position: fixed;
+  overflow: hidden;
+  top: 0;
+}
+.nav ul {
+  width: 40%;
+  margin: 0;
+
+}
+.nav :first-child li  {
+ display: inline-flex;
+ list-style-type: none;
+ padding: 3% 5%;
+}
+.nav :first-child :hover {
+  background-color: #937B71;
+}
+.nav a {
+  text-decoration: none;
+  color:#EAE6E5;
+}
+.header {
+  background-image: url(../images/header.jpg);
+  background-size: 102% 102%;
+  height: 1000px;
+  margin: 0;
+}
+.about {
+  width: 100%;
+  height: 600px;
+  background-color:#888485;
+  margin: 0;
+}
+
+.booking {
+  width: 100%;
+  display: flex;
+  height: 800px;
+  background-image: url(../images/bookBkgrnd.jpg);
+  justify-content: center;
+  align-items: center;
+
+}
+
+.formCont {
+  width: 70%;
+  height: 70%;
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  flex-direction: column;
+  background-color: rgba(234, 230, 229, 0.85);
+  border-radius: 30px;
+  /* flex: 1; */
+}
+.stepsDisplay {
+  /* display: flex;  */
+  align-items: flex-start;
+
+  /* justify-content: flex-start;
+  align-content: flex-start;
+  align-items: flex-start; */
+  /* flex: 1; */
+
+}
+#dataForm {
+  margin-top: 10%;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#dataForm label  {
+  align-self: flex-start;
+}
+
+.hotels {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* #dataForm input  {
+  align-self: flex-end;
+} */
+.step {
+  width: 100px;
+  margin-left: 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+  border-radius: 50px;
+  border: 1px solid #937B71;
+  background-color:rgba(234, 230, 229, 1);
+  /* flex: 1; */
+}
