@@ -5,7 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge"> -->
   <title>Document</title>
-  <link rel="stylesheet" type="text/css" href="stylesheets/style.css">
+	<link rel="stylesheet" type="text/css" href="stylesheets/style.css">
+	<link rel="stylesheet" type="text/css" href="stylesheets/card-js.min.css">
+	
+	<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+	
 </head>
 <body>
   <div class="header">
@@ -32,7 +36,7 @@
 					<div class="step">Оплата</div>
 					<div class="step">Успех</div>
 			</div>
-			<div class="container hotels">
+			<div class="container payment">
 					<!-- <form action="/api/pickRoom" id="dataForm">
 						<label for="lastName">Фамилия</label>
 						<input type="text" name="lastName" placeholder="Петров" required/><br/>
@@ -64,7 +68,7 @@
 						
 						
 					</form> -->
-					<div class="filterContainer">
+					<!-- <div class="filterContainer">
 						<form action="#" id="filterForm">
 						<p>Поиск по критериям:</p>
 						
@@ -101,9 +105,32 @@
 						<input type="submit" value="Применить фильтр"/>
 						</form>
 					</div>
-					<div class="hotelsContainer">
-
-					</div>
+					<div class="hotelsContainer"></div> -->
+					
+							<!-- <form action="" class = "payment">
+							<label for="cardNum">Введите номер карты</label>
+							<input type="text" name="cardNum" id="cardNum">
+							<div class = "details">
+								<label for="date">Срок годности</label>
+								<input type="date" name="date" id="date">
+								<label for="CV">CV Code</label>
+								<input type="text" name="CV" id="CV">
+							</div>
+							<label for="coupon">Enter coupon code</label>
+							<input type="text" name="" id="">
+						</form> -->
+							
+						
+						
+						
+							<!-- Add Name -->
+							<div style="margin: 10% 20% 10% 20%; width: 60%;  ">
+								<div id="paymentHead">Оплата</div>
+								<div class="card-js" data-capture-name="true"></div>
+								<button id="confirmPayment">Оплатить</button>
+							</div>
+						
+						
 			</div>
       
 			
@@ -113,6 +140,7 @@
 
 
   <div class="footer"></div>
-  <script src="javascripts/script.js"></script>
+	<script src="javascripts/script.js"></script>
+	<script src = "javascripts/card-js.min.js"></script>
 </body>
 </html>
