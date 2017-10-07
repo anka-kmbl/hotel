@@ -79,9 +79,41 @@ body {
   justify-content: center;
   flex-direction: column;
 }
+#dataForm input {
+  padding:5px;
+  border-radius: 3px;
+  border: solid 1px #4E4E4E;
+  color:black;
+  
+}
+
+#dataForm input[type = "submit"]:hover{
+  border: 1px solid grey;
+}
+
+#dataForm input[type = "submit"] {
+  padding-left: 1%;
+  border-radius: 3px;
+  border: 0 solid black;
+  color:black;
+  padding: 10px 15px 10px;
+  background-color: #D4C1B8;
+  font-weight: bold;
+  margin-bottom: 20px;
+  border: 1px solid #D4C1B8;
+  transition: all 0.5s;
+}
+
+#dataForm select{
+  margin-bottom: 10px;
+  border-radius: 4px;
+  
+  padding: 5px 5px 5px;
+}
 
 #dataForm label  {
-  align-self: flex-start;
+  align-self: center;
+  margin-bottom: 5%;
 }
 .filterContainer {
   /* display: flex; */
@@ -139,4 +171,8 @@ body {
   text-align: center;
   font-size: 25px;
   margin-bottom: 5%;
+}
+
+#dataForm > label {
+  text-align: center;
 }

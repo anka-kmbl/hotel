@@ -34,10 +34,10 @@
 					<div class="step">Выбор даты</div>
 					<div class="step">Выбор номера</div>
 					<div class="step">Оплата</div>
-					<div class="step">Успех</div>
+					<div class="step">Готово</div>
 			</div>
 			<div class="container payment">
-					<!-- <form action="/api/pickRoom" id="dataForm">
+					<form action="/api/pickRoom" id="dataForm">
 						<label for="lastName">Фамилия</label>
 						<input type="text" name="lastName" placeholder="Петров" required/><br/>
 						<label for="name">Имя</label>
@@ -51,15 +51,16 @@
 						<input type="date" name="checkOut" min="2017-10-09" max="2017-12-31" value="2017-10-15" required/><br/>
 						<input type="submit" value="Submit"/>
 
-						<label for="numAdutlts">Количество взрослых</label>
+						<label for="numAdutlts">Количество взрослых <i class = "fa fa-child"></i></label>
 							<select name="numAdults">
 							<option value="1">1</option>
 							<option value="2">2</option>
 							<option value="3">3</option>
 							<option value="4">4</option>
 						</select>
-						<label for="numChildren">Количество взрослых</label>
-						<select name="numChildren">
+						<label for="numChildren">Количество детей <i class = "fa fa-сhild"></i> </label>
+						
+						<select name="numChildren" >
 								<option value="no">Без детей</option>
 								<option value="1">1</option>
 								<option value="2">2</option>
@@ -67,14 +68,14 @@
 						</select>
 						
 						
-					</form> -->
+					</form>
 					<!-- <div class="filterContainer">
 						<form action="#" id="filterForm">
 						<p>Поиск по критериям:</p>
 						
 						<!-- <label for="budget">Ваш бюджет</label> -->
 					
-						<p>Ваш бюджет</p>
+						<!-- <p>Ваш бюджет</p>
 						<input type="radio" name="budget90" value="lt90"/> 
 						<label for="budget1">до 110$</label><br/>
 						<input type="radio" name="budget2" value="gt90lt150"/ checked> 
@@ -105,7 +106,7 @@
 						<input type="submit" value="Применить фильтр"/>
 						</form>
 					</div>
-					<div class="hotelsContainer"></div> -->
+					<div class="hotelsContainer"></div> --> 
 					
 							<!-- <form action="" class = "payment">
 							<label for="cardNum">Введите номер карты</label>
@@ -124,11 +125,11 @@
 						
 						
 							<!-- Add Name -->
-							<div style="margin: 10% 20% 10% 20%; width: 60%;  ">
+							<!-- <div style="margin: 10% 20% 10% 20%; width: 60%;  ">
 								<div id="paymentHead">Оплата</div>
 								<div class="card-js" data-capture-name="true"></div>
 								<button id="confirmPayment">Оплатить</button>
-							</div>
+							</div> -->
 						
 						
 			</div>
