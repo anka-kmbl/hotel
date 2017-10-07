@@ -19,10 +19,14 @@ document.getElementById('dataForm').addEventListener('submit', (e) => {
 })
 
 function getNewData() {
+  let  = document.getElementsByName('lastName')[0];
+
   return new Promise((res, rej) => {
     let xhr = new XMLHttpRequest();
-    xhr.open('GET', '/api/pickRoom');
-    xhr.send();
+    xhr.open('POST', '/api/pickRoom');
+    xhr.send({
+      peopleNum: 
+    });
     xhr.addEventListener('load', (e) => {
       let xhttp = e.target;
       if(xhttp.status !== 200) {

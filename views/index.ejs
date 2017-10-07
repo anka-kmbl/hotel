@@ -46,21 +46,64 @@
 						<label for="checkOut">Дата отъезда</label>
 						<input type="date" name="checkOut" min="2017-10-09" max="2017-12-31" value="2017-10-15" required/><br/>
 						<input type="submit" value="Submit"/>
+
+						<label for="numAdutlts">Количество взрослых</label>
+							<select name="numAdults">
+							<option value="1">1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<option value="4">4</option>
+						</select>
+						<label for="numChildren">Количество взрослых</label>
+						<select name="numChildren">
+								<option value="no">Без детей</option>
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+						</select>
+						
+						
 					</form> -->
 					<div class="filterContainer">
 						<form action="#" id="filterForm">
 						<p>Поиск по критериям:</p>
 						
-						<label for="budget">Ваш бюджет</label>
-						<input type="radio" name="budget" value="до 90$"/> до 90$
-						<input type="radio" name="budget" value="от 90$ до 150$"/ checked> от 90$ до 150$
-						<input type="radio" name="budget" value="от 150$ до 200$"/> от 150$ до 200$
-						<input type="radio" name="budget" value="от 200$ до 400$"/> от 200$ до 400$
-						<input type="radio" name="budget" value="больше 400$"/> больше 400$
-
+						<!-- <label for="budget">Ваш бюджет</label> -->
+					
+						<p>Ваш бюджет</p>
+						<input type="radio" name="budget90" value="lt90"/> 
+						<label for="budget1">до 110$</label><br/>
+						<input type="radio" name="budget2" value="gt90lt150"/ checked> 
+						<label for="budget2">от 110$ до 150$</label><br/>
+						<input type="radio" name="budget3" value="gt150lt200"/>
+						<label for="budget3">от 150$ до 200$</label> <br/>
+						<input type="radio" name="budget4" value="gt200lt400"/> 
+						<label for="budget4">больше 200$</label><br/>
+						<p>Питание</p>
+						<input type="radio" name="breakfast" value=""/>
+						<label for="breakfast">Питание не включено</label> <br/>
+						<input type="radio" name="breakfast" value=""/>
+						<label for="breakfast" checked>Завтрак включен</label> <br/>
+						<input type="radio" name="breakfastNdinner" value=""/>
+						<label for="breakfast">Завтрак и ужин</label> <br/>
+						
+						<input type="radio" name="all" value=""/>
+						<label for="all">Полный пансион</label> <br/>
+						<p>Удобства в номере</p>
+						<input type="checkbox" name="wifi" value=""/>
+						<label for="wifi">Бесплатный WI-FI</label> <br/>
+						<input type="checkbox" name="balcony" value=""/>
+						<label for="balcony">Балкон</label> <br/>
+						<input type="checkbox" name="bathroom" value=""/>
+						<label for="bathroom">Ванная</label> <br/>
+						<input type="checkbox" name="kitchen" value=""/>
+						<label for="kitchen">Мини-кухня</label> <br/>
+						<input type="submit" value="Применить фильтр"/>
 						</form>
 					</div>
-					<div class="hotelsContainer"></div>
+					<div class="hotelsContainer">
+
+					</div>
 			</div>
       
 			
