@@ -10,6 +10,7 @@ window.onload = function() {
 	document.getElementsByName('card-number')[0].required = true;
 	document.getElementsByClassName('expiry')[0].required = true;
 	document.getElementsByClassName('cvc')[0].required = true;
+	document.getElementsByClassName('success')[0].classList.add('displayNone');
 };
 
 document.getElementById('goBackStart').onclick = goBack;
@@ -385,7 +386,7 @@ $('a[href*="#"]')
 						$target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
 						$target.focus(); // Set focus again
 					}
-						});
+				});
 			}
 		}
 	});
