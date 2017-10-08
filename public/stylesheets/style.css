@@ -48,7 +48,7 @@ body {
 .header {
   background-image: url(../images/header.jpg);
   background-size: 102% 102%;
-  height: 1000px;
+  height: 100vh;
   margin: 0;
 }
 .about {

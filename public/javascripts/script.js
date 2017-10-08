@@ -7,6 +7,9 @@ window.onscroll = function() {
 };
 window.onload = function() {
 	document.getElementsByClassName('step')[0].style.border = 'solid 3px #FD6290';
+	document.getElementsByName('card-number')[0].required = true;
+	document.getElementsByClassName('expiry')[0].required = true;
+	document.getElementsByClassName('cvc')[0].required = true;
 };
 
 document.getElementById('goBackStart').onclick = goBack;
@@ -23,6 +26,10 @@ document.getElementById('dataForm').addEventListener('submit', (e) => {
 			console.log(err);
 		});
 });
+document.getElementById('goBackToForm').addEventListener('click', (e) => {
+	e.preventDefault();
+	display(1, 'formDiv');
+});
 document.getElementById('goBackPickRooms').addEventListener('click', (e) => {
 	e.preventDefault();
 	getNewData()
@@ -32,7 +39,12 @@ document.getElementById('goBackPickRooms').addEventListener('click', (e) => {
 			displayRooms(rooms);
 		})
 		.catch((err) => {
-			console.log(err);
+			if(err == 'date') {
+				console.log('date');
+			}
+			if(err == 'peopleNum') {
+				console.log('peopleNum');
+			}
 		});
 
 });
@@ -69,7 +81,6 @@ document.getElementById('filterForm').addEventListener('submit', (e) => {
 	console.log(formData);
 	filter(formData)
 		.then((res) => {
-			// let rooms = JSON.parse(res);
 			displayRooms(res);
 			console.log(res);
 		})
@@ -78,14 +89,11 @@ document.getElementById('filterForm').addEventListener('submit', (e) => {
 		});
 });
 
-document.getElementById('confirmPayment').addEventListener('click', (e) => {
+
+document.getElementById('payForm').addEventListener('submit', (e) => {
 	e.preventDefault();
 	display(3, 'success');
-	
 });
-// function displayStart() {
-	
-// }
 function filter(data) {
 	return new Promise((res,rej) => {
 		let xhr = new XMLHttpRequest();
@@ -129,16 +137,7 @@ function displayRooms(roomsObj) {
 		let errorText = document.createElement('p');
 		errorText.innerHTML = 'К сожалению, по вашему запросу не найдено свободных номеров.<br/>' + 
 		'Выберите другие фильтры или даты.'; 
-		// errorText.innerHTML = 'К сожалению, в номерах может разместиться не более 4 человек.<br/>' +
-		// 'Предлагаем забронировать два подходящих номера отдельно.<br/> '+
-		// 'Вы можете вернуться и ввести другое количество людей, нажав на кнопку ниже.<br/>';
-		// let backButton = document.createElement('button');
-		// backButton.onclick = goBack;
-		// backButton.innerHTML = 'Указать другое количество';
 		hotelsCont.appendChild(errorText);
-		// hotelsCont.appendChild(backButton);
-		
-
 	}
 	
 	for(let key in roomsObj) {
@@ -272,6 +271,12 @@ function getNewData() {
 	let numChildren = +numChildrenSelect.options[numChildrenSelect.selectedIndex].value;
 	personObj.numChildren = numChildren;
 	let peopleNum = numAdults + numChildren;
+
+	if(peopleNum > 4) {
+		return new Promise((res, rej) => {
+			rej('peopleNum');
+		});
+	}
 	
 	return new Promise((res, rej) => {
 		let xhr = new XMLHttpRequest();

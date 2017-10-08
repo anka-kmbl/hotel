@@ -51,7 +51,7 @@
 							<label for="checkIn">Дата заезда</label>
 							<input type="date" name="checkIn" min="2017-10-09" max="2017-12-31" value="2017-10-09" required/><br/>
 							<label for="checkOut">Дата отъезда</label>
-							<input type="date" name="checkOut" min="2017-10-09" max="2017-12-31" value="2017-10-15" required/><br/>
+							<input type="date" name="checkOut" min="2017-10-10" max="2017-12-31" value="2017-10-12" required/><br/>
 							
 
 							<label for="numAdutlts">Количество взрослых</label>
@@ -120,33 +120,22 @@
 					
 					<!-- payment -->
 					<div class="paymentPage displayNone">
-							<!-- <form action="" class = "payment">
-							<label for="cardNum">Введите номер карты</label>
-							<input type="text" name="cardNum" id="cardNum">
-							<div class = "details">
-								<label for="date">Срок годности</label>
-								<input type="date" name="date" id="date">
-								<label for="CV">CV Code</label>
-								<input type="text" name="CV" id="CV">
-							</div>
-							<label for="coupon">Enter coupon code</label>
-							<input type="text" name="" id="">
-						</form> -->
-							
-						
-						
 						
 							<!-- Add Name -->
 							<div style="margin: 10% 20% 10% 20%; width: 60%;  " class="paymentForm">
 								<div id="paymentHead">Оплата</div>
-								<div class="card-js" data-capture-name="true"></div>
-								<button id="confirmPayment">Оплатить</button>
+								<form id="payForm">
+									<div class="card-js" data-capture-name="true"></div>
+									<button id="confirmPayment" type="submit">Оплатить</button>
+								</form>
+								
 							</div>
 							<button id="goBackPickRooms" value="Назад">Назад к выбору номера</button>
 						
 					</div>
 					<div class="success displayNone">
 						<p>Ваша бронь подтверждена!</p>
+						<button class="generalButtonStyle" id="goBackToForm">Вернуться в меню бронирования</button>
 					</div>
 
 						
