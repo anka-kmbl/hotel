@@ -7,24 +7,28 @@
   <title>Document</title>
 	<link rel="stylesheet" type="text/css" href="stylesheets/style.css">
 	<link rel="stylesheet" type="text/css" href="stylesheets/card-js.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>	
+
 	
 	<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
 	
 </head>
 <body>
-  <div class="header">
+  <div id	="header">
+		<div id="logo">Karolina Spa & Resort</div>
     <div class="nav">
         <ul>
-          <li><a href="#">Main</a></li>
-          <li><a href="#">About</a>
+          <li><a href="#header">Main</a></li>
+          <li><a href="#about">About</a>
           </li>
-        <li><a href="#">Book</a></li>
+        <li><a href="#dataForm">Book</a></li>
         <li><a href="#">Contacts</a></li>
 
         </ul>
     </div>
   </div>
-  <div class="about">
+  <div id = "about">
 		
     <!-- <p>Karolina Spa and Resort</p> -->
   </div>
@@ -37,12 +41,12 @@
 					<div class="step">Оплата</div>
 					<div class="step">Готово</div>
 			</div>
-			<div class="container">
+			<div >
 				<!-- startForm -->
 					<div class="formDiv">
 						<form action="/api/pickRoom" id="dataForm">
 							<label for="firstName">Фамилия</label>
-							<input type="text" name="firstName" placeholder="Петров" required/><br/>
+							<input type="text" name="firstName" placeholder="Петров" required /><br/>
 							<label for="lastName">Имя</label>
 							<input type="text" name="lastName" placeholder="Виталий" required/><br/>
 							<label for="patr">Отчество</label>
@@ -68,7 +72,7 @@
 									<option value="2">2</option>
 									<option value="3">3</option>
 							</select>
-							<input type="submit" value="Submit"/>
+							<input type="submit" value="Submit" class = "generalButtonStyle" />
 							
 						</form>
 					</div>
@@ -109,9 +113,9 @@
 									<label for="bathroom">Ванная</label> <br/>
 									<input type="checkbox" name="kitchen" id="kitchen" value=""/>
 									<label for="kitchen">Мини-кухня</label> <br/>
-									<input type="submit" value="Применить фильтр"/>
+									<input type="submit" value="Применить фильтр" class = "generalButtonStyle"/>
 									</form>
-									<button id="goBackStart" value="Назад к форме">Назад к форме</button>
+									<button id="goBackStart" value="Назад к форме" class = "generalButtonStyle">Назад к форме</button>
 									<!-- <button id="goToPayment" value="Оплатить">Перейти к оплате брони</button> -->
 								</div>
 								<div class="hotelsContainer"></div>
@@ -130,7 +134,7 @@
 								</form>
 								
 							</div>
-							<button id="goBackPickRooms" value="Назад">Назад к выбору номера</button>
+							<button id="goBackPickRooms" class = "generalButtonStyle" value="Назад">Назад к выбору номера</button>
 						
 					</div>
 					<div class="success displayNone">
@@ -145,11 +149,20 @@
 			
 			
     </div>
+	</div>
+	
+	<div id="advice" style = "opacity: 0;" class="alert alert-info alert-dismissable">
+      
+      <strong>Нужна помощь?</strong> Нажмите <a href="#dataForm">сюда</a>, чтобы открыть меню бронирования номера.<span id ="Closet">x</span>
   </div>
 
 
   <div class="footer"></div>
 	<script src="javascripts/script.js"></script>
 	<script src = "javascripts/card-js.min.js"></script>
+	
+	
+	
+
 </body>
 </html>
