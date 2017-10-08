@@ -42,7 +42,7 @@
 					<div class="formDiv">
 						<form action="/api/pickRoom" id="dataForm">
 							<label for="firstName">Фамилия</label>
-							<input type="text" name="firstName" placeholder="Петров" required/><br/>
+							<input type="text" name="firstName" placeholder="Петров" required /><br/>
 							<label for="lastName">Имя</label>
 							<input type="text" name="lastName" placeholder="Виталий" required/><br/>
 							<label for="patr">Отчество</label>
@@ -68,7 +68,7 @@
 									<option value="2">2</option>
 									<option value="3">3</option>
 							</select>
-							<input type="submit" value="Submit"/>
+							<input type="submit" value="Submit" class = "generalButtonStyle" />
 							
 						</form>
 					</div>
@@ -109,9 +109,9 @@
 									<label for="bathroom">Ванная</label> <br/>
 									<input type="checkbox" name="kitchen" id="kitchen" value=""/>
 									<label for="kitchen">Мини-кухня</label> <br/>
-									<input type="submit" value="Применить фильтр"/>
+									<input type="submit" value="Применить фильтр" class = "generalButtonStyle"/>
 									</form>
-									<button id="goBackStart" value="Назад к форме">Назад к форме</button>
+									<button id="goBackStart" value="Назад к форме" class = "generalButtonStyle">Назад к форме</button>
 									<!-- <button id="goToPayment" value="Оплатить">Перейти к оплате брони</button> -->
 								</div>
 								<div class="hotelsContainer"></div>
@@ -140,9 +140,9 @@
 							<div style="margin: 10% 20% 10% 20%; width: 60%;  " class="paymentForm">
 								<div id="paymentHead">Оплата</div>
 								<div class="card-js" data-capture-name="true"></div>
-								<button id="confirmPayment">Оплатить</button>
+								<button id = "confirmPayment" class = "generalButtonStyle">Оплатить</button>
 							</div>
-							<button id="goBackPickRooms" value="Назад">Назад к выбору номера</button>
+							<button id="goBackPickRooms" class = "generalButtonStyle" value="Назад">Назад к выбору номера</button>
 						
 					</div>
 					<div class="success displayNone">
@@ -162,5 +162,21 @@
   <div class="footer"></div>
 	<script src="javascripts/script.js"></script>
 	<script src = "javascripts/card-js.min.js"></script>
+	
+	<script type="text/javascript">
+  $(document).ready(function() {
+
+  $(window).on("scroll", function(e){
+		if($(window).scrollTop() >= $('.nav').height()) {
+			 $('.nav').css('background-color', 'black');
+		} 
+		else {
+			$('.nav').css('background-color', 'rgba(0,0,0,0)');	
+		}
+	});
+});
+</script>
+	
+
 </body>
 </html>

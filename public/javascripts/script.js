@@ -143,6 +143,7 @@ function displayRooms(roomsObj) {
 		let chooseButton = document.createElement('button');
 		chooseButton.innerHTML = 'Забронировать';
 		chooseButton.classList.add('chooseButton');
+		chooseButton.classList.add('generalButtonStyle');
 		let price = document.createElement('li');
 		price.innerHTML = roomsObj[key].price + '$';
 		// info.appendChild(name);
