@@ -91,7 +91,7 @@
 									<input type="radio" name="budget" id="budget4" value="gt200"/> 
 									<label for="budget4">больше 200$</label><br/>
 									<p>Питание</p>
-									<input type="radio" name="meal" id="noFood" value=" " checked/>
+									<input type="radio" name="meal" id="noFood" value="noMeal" checked/>
 									<label for="noFood">Питание не включено</label> <br/>
 									<input type="radio" name="meal" id="breakfast" value="breakfast"/>
 									<label for="breakfast" checked>Завтрак включен</label> <br/>
@@ -112,14 +112,14 @@
 									<input type="submit" value="Применить фильтр"/>
 									</form>
 									<button id="goBackStart" value="Назад к форме">Назад к форме</button>
-									<button id="goToPayment" value="Оплатить">Перейти к оплате брони</button>
+									<!-- <button id="goToPayment" value="Оплатить">Перейти к оплате брони</button> -->
 								</div>
 								<div class="hotelsContainer"></div>
 					</div>
 					
 					
 					<!-- payment -->
-					<div class="paymentPage">
+					<div class="paymentPage displayNone">
 							<!-- <form action="" class = "payment">
 							<label for="cardNum">Введите номер карты</label>
 							<input type="text" name="cardNum" id="cardNum">
@@ -137,12 +137,16 @@
 						
 						
 							<!-- Add Name -->
-							<!-- <div style="margin: 10% 20% 10% 20%; width: 60%;  ">
+							<div style="margin: 10% 20% 10% 20%; width: 60%;  " class="paymentForm">
 								<div id="paymentHead">Оплата</div>
 								<div class="card-js" data-capture-name="true"></div>
 								<button id="confirmPayment">Оплатить</button>
-							</div> -->
+							</div>
+							<button id="goBackPickRooms" value="Назад">Назад к выбору номера</button>
 						
+					</div>
+					<div class="success displayNone">
+						<p>Ваша бронь подтверждена!</p>
 					</div>
 
 						

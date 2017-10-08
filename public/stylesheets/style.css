@@ -221,3 +221,6 @@ img {
 .displayNone {
   display: none;
 }
+.success {
+  height: 400px;
+}

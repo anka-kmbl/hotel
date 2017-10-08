@@ -11,7 +11,7 @@ let roomsObj = {
 			wifi: true
 		},
 		photo: '/images/single-room-1.jpg',
-		meal: ''
+		meal: 'noMeal'
      
 
 	},
@@ -49,7 +49,7 @@ let roomsObj = {
 		facilities: {
 			wifi: true
 		},
-		meal: '',
+		meal: 'noMeal',
 		photo: '/images/double-1.jpg'
     
     
@@ -104,7 +104,7 @@ let roomsObj = {
 		facilities: {
 			wifi: true
 		}, 
-		meal: '',
+		meal: 'noMeal',
 		photo: '/images/triple-1.jpg'
     
 
@@ -171,7 +171,7 @@ let budget = {
 	110: 0,
 	150: 110,
 	200: 150,
-	200: 10000
+	201: 10000
 };
 router.post('/', (req, res) => {
 	console.log(req.body);
@@ -193,29 +193,14 @@ router.post('/filter', (req, res) => {
 });
 
 function findFilterRooms(filters) {
-	// for(let key in filters) {
-	// 	for(let i in apprRooms) {
-	// 		if(filters)
-	// 		for(let k in facilities) {
-	// 			if(k == key) {
-
-	// 			}
-	// 		}
-	// 		if(apprRooms[i].facilities ==)
-	// 	}
-	// }
 	let max = filters.price;
 	let min = budget[filters.price];
 	let filteredRooms = {};
 	let count = 0;
 	let countFilters = 0;
-	console.log('in filter');
 	for(let j in apprRooms) {
 		if(apprRooms[j].price >= min && apprRooms[j].price <= max) {
-			console.log(1);
 			if(apprRooms[j].meal == filters.meal) {
-				console.log(2);
-				
 				for(let key in apprRooms.facilities) {
 					for(let i in filters) {
 						countFilters++;
