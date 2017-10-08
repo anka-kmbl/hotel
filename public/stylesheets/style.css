@@ -13,16 +13,19 @@ body {
   overflow: hidden;
   top: 0;
   transition: all 0.4s;
+  height: 8%;
 }
 .nav ul {
   width: 40%;
   margin: 0;
-
+  height: 100%;
 }
 .nav :first-child li  {
  display: inline-flex;
  list-style-type: none;
- padding: 3% 5%;
+ width: 20%;
+ height: 100%;
+ /*padding: 3% 5%;*/
 }
 .nav :first-child :hover {
   background-color: #937B71;
@@ -30,6 +33,12 @@ body {
 .nav a {
   text-decoration: none;
   color:#EAE6E5;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* padding: 40% 60%; */
 }
 .roomInfoDiv {
   display: flex;
@@ -197,8 +206,14 @@ img {
   margin-bottom: 3%;
 }
 
+
+#inputs{
+  
+  display:flex;
+}
+
 .smallInputs{
-  margin-left:29%;
+  
   display: inline-block;
   align-self: flex-end
 }
@@ -250,10 +265,11 @@ img {
 textarea{
   margin-bottom: 5%;
   height: 60px;
+  border-radius: 5px;
 }
 
 .bigInputs{
-  
+  margin-top:5%;
   margin-left:6%;
   display: inline-block;
   align-self: flex-start;
@@ -448,6 +464,7 @@ textarea{
   text-align: center;
   font-size: 25px;
   margin-bottom: 5%;
+  width: 100%;
 }
 
 .displayNone {
@@ -472,7 +489,14 @@ textarea{
   color: black;
   border: 0px solid black;
 }
-
+.paymentForm {
+  margin: 10% 10% 2% 15%;
+  width: 70%
+}
+#paymentHead img {
+  width: 25px;
+  height: 25px;
+}
 
 #logo{
   margin: auto;

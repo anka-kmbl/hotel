@@ -29,7 +29,7 @@ document.getElementById('dataForm').addEventListener('submit', (e) => {
 });
 document.getElementById('goBackToForm').addEventListener('click', (e) => {
 	e.preventDefault();
-	display(1, 'formDiv');
+	display(0, 'formDiv');
 });
 document.getElementById('goBackPickRooms').addEventListener('click', (e) => {
 	e.preventDefault();
