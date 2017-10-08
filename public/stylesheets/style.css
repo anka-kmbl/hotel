@@ -55,7 +55,10 @@ body {
 }
 
 
-
+#advice a{
+  text-decoration: none;
+  
+}
 
 .roomsPhotoDiv {
   /* display: flex;
@@ -68,6 +71,7 @@ body {
 .roomsInfoList {
   align-self: flex-end;
   display: inline-block;
+  width: 200px;
 }
 
 #header {
@@ -164,6 +168,8 @@ img {
   display: flex;
   height: auto;
   background-image: url(../images/bookBkgrnd.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   justify-content: center;
   align-items: center;
 
