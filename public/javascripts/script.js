@@ -182,19 +182,19 @@ function displayRooms(roomsObj) {
 
 		switch(roomsObj[key].meal) {
 		case 'breakfast':
-			meal.innerHTML = 'Завтрак включен';
+			meal.innerHTML = 'завтрак включен';
 			info.appendChild(meal);
 			break;
 		case 'breakfastNdinner':
-			meal.innerHTML = 'Завтрак и ужин';
+			meal.innerHTML = 'завтрак и ужин';
 			info.appendChild(meal);
 			break;
 		case 'all':
-			meal.innerHTML = 'Полный пансион';
+			meal.innerHTML = 'полный пансион';
 			info.appendChild(meal);
 			break;
 		case '':
-			meal.innerHTML = 'Питание не входит в стоимость';
+			meal.innerHTML = 'питание не входит в стоимость';
 			info.appendChild(meal);
 			break;
 		}
@@ -231,9 +231,12 @@ function displayRooms(roomsObj) {
 
 function createPersonInfoDiv(personObj) {
 	let div = document.createElement('div');
+	div.classList.add('buyerInfo');
 	let p = document.createElement('p');
+	let hp = document.createElement('p');
 	if(personObj.numChildren > 0) {
-		p.innerHTML = 'Проверьте, пожалуйста, ваши данные:<br/> '+
+		hp.innerHTML = 'Проверьте, пожалуйста, ваши данные:';
+		p.innerHTML = 
 		'Фамилия: ' + personObj.firstName + '<br/>'+
 		'Имя: ' + personObj.lastName + '<br/>' + 
 		'Отчество: ' + personObj.patr + '<br/>' + 
@@ -242,7 +245,8 @@ function createPersonInfoDiv(personObj) {
 		'Количество взрослых: ' + personObj.numAdults + '<br/>' + 
 		'Количество детей: ' + personObj.numChildren + '<br/>';
 	} else {
-		p.innerHTML = 'Проверьте, пожалуйста, ваши данные:<br/> '+
+		hp.innerHTML = 'Проверьте, пожалуйста, ваши данные:<br/> ';
+		p.innerHTML = 
 		'Фамилия: ' + personObj.firstName + '<br/>'+
 		'Имя: ' + personObj.lastName + '<br/>' + 
 		'Отчество: ' + personObj.patr + '<br/>' + 
@@ -250,8 +254,10 @@ function createPersonInfoDiv(personObj) {
 		'Дата отъезда: ' + personObj.checkOut + '<br/>' + 
 		'Количество взрослых: ' + personObj.numAdults + '<br/>';
 	}
-	
+	hp.classList.add('headRes');
+	div.appendChild(hp);
 	div.appendChild(p);
+	
 	return div;
 }
 
@@ -299,3 +305,85 @@ function getNewData() {
 		});
 	});
 }
+
+
+$(document).ready(function() {
+
+		$('#Closet').click(function(){
+			$('#advice').fadeOut(400);
+		});	
+	
+		$(window).on("scroll", function(e){
+			if($(window).scrollTop() >= $('.nav').height()) {
+				 $('.nav').css('background-color', 'black');
+			} 
+			else {
+				$('.nav').css('background-color', 'rgba(0,0,0,0)');	
+				
+			}
+		});
+	});
+	
+	function advice(){
+			document.getElementById("advice").style.opacity = "1";
+		}
+		
+
+		var no_active_delay = 3;
+		var now_no_active = 0;
+		setInterval("now_no_active++",1000);
+		setInterval("adviceSend()",1000);
+			
+			document.onscroll = activeUser;
+		setInterval(function(){if($(window).scrollTop() > 1000){activeUser();}},1000);
+			
+
+
+			function activeUser() {
+			now_no_active = 0; 
+		}
+			function adviceSend(){
+				if(now_no_active >= no_active_delay){
+					advice();
+					
+				}
+				
+			}
+			$('a[href*="#"]')
+			// Remove links that don't actually link to anything
+			.not('[href="#"]')
+			.not('[href="#0"]')
+			.click(function(event) {
+				// On-page links
+				if (
+					location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
+					&& 
+					location.hostname == this.hostname
+				) {
+					// Figure out element to scroll to
+					var target = $(this.hash);
+					target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+					// Does a scroll target exist?
+					if (target.length) {
+						// Only prevent default if animation is actually gonna happen
+						event.preventDefault();
+						$('html, body').animate({
+							scrollTop: target.offset().top
+						}, 1000, function() {
+							// Callback after animation
+							// Must change focus!
+							var $target = $(target);
+							$target.focus();
+							if ($target.is(":focus")) { // Checking if the target was focused
+								return false;
+							} else {
+								$target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
+								$target.focus(); // Set focus again
+							};
+						});
+					}
+				}
+			});
+
+
+			

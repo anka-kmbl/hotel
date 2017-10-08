@@ -7,24 +7,28 @@
   <title>Document</title>
 	<link rel="stylesheet" type="text/css" href="stylesheets/style.css">
 	<link rel="stylesheet" type="text/css" href="stylesheets/card-js.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>	
+
 	
 	<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
 	
 </head>
 <body>
-  <div class="header">
+  <div id	="header">
+		<div id="logo">Karolina Spa & Resort</div>
     <div class="nav">
         <ul>
-          <li><a href="#">Main</a></li>
-          <li><a href="#">About</a>
+          <li><a href="#header">Main</a></li>
+          <li><a href="#about">About</a>
           </li>
-        <li><a href="#">Book</a></li>
+        <li><a href="#dataForm">Book</a></li>
         <li><a href="#">Contacts</a></li>
 
         </ul>
     </div>
   </div>
-  <div class="about">
+  <div id = "about">
 		
     <!-- <p>Karolina Spa and Resort</p> -->
   </div>
@@ -37,7 +41,7 @@
 					<div class="step">Оплата</div>
 					<div class="step">Готово</div>
 			</div>
-			<div class="container">
+			<div >
 				<!-- startForm -->
 					<div class="formDiv">
 						<form action="/api/pickRoom" id="dataForm">
@@ -156,6 +160,11 @@
 			
 			
     </div>
+	</div>
+	
+	<div id="advice" style = "opacity: 0;" class="alert alert-info alert-dismissable">
+      
+      <strong>Нужна помощь?</strong> Нажмите <a href="#dataForm">сюда</a>, чтобы открыть меню бронирования номера.<span id ="Closet">x</span>
   </div>
 
 
@@ -163,19 +172,7 @@
 	<script src="javascripts/script.js"></script>
 	<script src = "javascripts/card-js.min.js"></script>
 	
-	<script type="text/javascript">
-  $(document).ready(function() {
-
-  $(window).on("scroll", function(e){
-		if($(window).scrollTop() >= $('.nav').height()) {
-			 $('.nav').css('background-color', 'black');
-		} 
-		else {
-			$('.nav').css('background-color', 'rgba(0,0,0,0)');	
-		}
-	});
-});
-</script>
+	
 	
 
 </body>
