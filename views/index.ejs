@@ -27,8 +27,15 @@
     </div>
   </div>
   <div id = "about">
+		<div id="about-bg">
+			<div id="about-heading">
+				Karolina Spa&Resort at your service
+			</div>
+			<div id="about-content">
+					Наш отель предоставляет разнообразнейшие услуги, которые гарантируют вам отдых на высшем уровне. Квалифицированный персонал, продуманная инфраструктура и забота о гостях - вот три вещи, которые делают наш отель особенным.<br/> С нетерпением ждем вас в гости.
+			</div>
+		</div>
 		
-    <!-- <p>Karolina Spa and Resort</p> -->
   </div>
   <div class="booking" id ="bookAnchor">
 		
@@ -155,7 +162,28 @@
   </div>
 
 
-  <div class="footer"></div>
+  <div class="footer">
+		<div id="footerHeader">Contact us</div>
+			<form id="contactForm" name="sentMessage" >
+				<div id = "inputs"><div class="smallInputs"><div><input class="form-control" id="email" type="email" placeholder="Your Email *" required data-validation-required-message="Please enter your email address.">
+						</div>
+						<div><input class="form-control" id="phone" type="tel" placeholder="Your Phone *" required data-validation-required-message="Please enter your phone number.">
+						</div>
+						<input class="form-control" id="name" type="text" placeholder="Your Name *" required data-validation-required-message="Please enter your name.">
+						
+						
+							
+						
+							</div>
+								<div class="bigInputs"><textarea class="form-control" id="message" placeholder="Your Message *" required data-validation-required-message="Please enter a message."></textarea>
+								</div></div>
+					
+								
+							
+							<button id="sendMessageButton" >Send Message</button>
+						
+				</form>
+	</div>
 	<script src="javascripts/script.js"></script>
 	<script src = "javascripts/card-js.min.js"></script>
 	
