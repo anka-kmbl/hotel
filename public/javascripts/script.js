@@ -25,7 +25,16 @@ document.getElementById('dataForm').addEventListener('submit', (e) => {
 });
 document.getElementById('goBackPickRooms').addEventListener('click', (e) => {
 	e.preventDefault();
-	display(1, 'hotelsPage');
+	getNewData()
+		.then((result) => {
+			let rooms = result;
+			display(1, 'hotelsPage');
+			displayRooms(rooms);
+		})
+		.catch((err) => {
+			console.log(err);
+		});
+
 });
 document.getElementById('filterForm').addEventListener('submit', (e) => {
 	e.preventDefault();
@@ -189,9 +198,6 @@ function displayRooms(roomsObj) {
 			info.appendChild(meal);
 			break;
 		}
-
-		// div.appendChild(name);
-		// div.appendChild(img);
 		divPhoto.appendChild(name);
 		divPhoto.appendChild(img);
 		div.appendChild(divPhoto);
@@ -202,9 +208,17 @@ function displayRooms(roomsObj) {
 			let thisDiv = div;
 			display(2, 'paymentPage');
 			let personInfo = createPersonInfoDiv(personObj);
-			document.getElementsByClassName('paymentPage')[0].insertBefore(thisDiv,document.getElementsByClassName('paymentForm')[0]);
-			document.getElementsByClassName('paymentPage')[0].insertBefore(personInfo,thisDiv);
-			document.getElementsByClassName('paymentPage')[0].getElementsByClassName('chooseButton')[0].classList.add('displayNone');
+			let paymentPage = document.getElementsByClassName('paymentPage')[0];
+			let oldInfo = paymentPage.children[0];
+			let oldRoom = paymentPage.children[1];
+			if(paymentPage.children.length >= 4) {
+				paymentPage.removeChild(oldInfo);
+				paymentPage.removeChild(oldRoom);
+			}
+			
+			paymentPage.insertBefore(thisDiv,document.getElementsByClassName('paymentForm')[0]);
+			paymentPage.insertBefore(personInfo,thisDiv);
+			paymentPage.getElementsByClassName('chooseButton')[0].classList.add('displayNone');
 			// chooseRoom(thisDiv);
 		});
 		divPhoto.classList.add('roomsPhotoDiv');
