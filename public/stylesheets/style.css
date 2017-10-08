@@ -370,6 +370,7 @@ img {
   text-align: center;
   font-size: 25px;
   margin-bottom: 5%;
+  width: 100%;
 }
 .success {
   height: 400px;
@@ -399,7 +400,14 @@ img {
   color: black;
   border: 0px solid black;
 }
-
+.paymentForm {
+  margin: 10% 10% 2% 15%;
+  width: 70%
+}
+#paymentHead img {
+  width: 25px;
+  height: 25px;
+}
 
 #logo{
   margin: auto;
