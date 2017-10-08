@@ -12,16 +12,19 @@ body {
   overflow: hidden;
   top: 0;
   transition: all 0.4s;
+  height: 8%;
 }
 .nav ul {
   width: 40%;
   margin: 0;
-
+  height: 100%;
 }
 .nav :first-child li  {
  display: inline-flex;
  list-style-type: none;
- padding: 3% 5%;
+ width: 20%;
+ height: 100%;
+ /*padding: 3% 5%;*/
 }
 .nav :first-child :hover {
   background-color: #937B71;
@@ -29,6 +32,12 @@ body {
 .nav a {
   text-decoration: none;
   color:#EAE6E5;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* padding: 40% 60%; */
 }
 .roomInfoDiv {
   display: flex;
