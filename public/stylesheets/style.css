@@ -6,6 +6,7 @@ body {
   padding: 0
 }
 .nav {
+  z-index: 15;
   display: flex;
   justify-content: flex-end;
   width: 100%;
@@ -556,7 +557,7 @@ textarea{
   visibility: hidden;
   z-index: 10;
   width: 20%;
-  height:15%;
+  
   padding: 20px;
   background-color:white;
   border-radius: 15px;
