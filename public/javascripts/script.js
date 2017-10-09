@@ -24,7 +24,9 @@ document.getElementById('dataForm').addEventListener('submit', (e) => {
 			displayRooms(rooms);
 		})
 		.catch((err) => {
-			alert('К сожалению,в одном номере может проживать не более 4х человек. Введите, пожалуйста, другое количество.');
+			// alert('К сожалению,в одном номере может проживать не более 4х человек. Введите, пожалуйста, другое количество.');
+			document.getElementById('popup').style.visibility = 'visible';
+			
 			console.log(err);
 		});
 });
@@ -323,6 +325,10 @@ $(document).ready(function() {
 	$('#Closet').click(function(){
 		$('#advice').fadeOut(400);
 	});	
+
+	$('#fader').click(function(){
+		$('#popup').css('visibility', 'hidden');
+	});
 	
 	$(window).on('scroll', function(e){
 		if($(window).scrollTop() >= $('.nav').height()) {

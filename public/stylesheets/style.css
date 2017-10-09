@@ -206,6 +206,17 @@ img {
 
 }
 
+#fader{
+  font-weight: bold;
+  color:black;
+  position: absolute;
+  top: 2px;
+  right: 11px;
+  cursor: pointer;
+  font-family: sans-serif;
+  
+}
+
 #about-heading{
   font-weight: bold;
   font-size: 60px;  
@@ -536,4 +547,18 @@ textarea{
 
 .displayNone {
   display: none;
+}
+
+
+#popup {
+  border: 3px solid #FFD95C;
+  position: absolute;
+  visibility: hidden;
+  z-index: 10;
+  width: 20%;
+  height:15%;
+  padding: 20px;
+  background-color:white;
+  border-radius: 15px;
+  
 }

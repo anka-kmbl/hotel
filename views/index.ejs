@@ -21,7 +21,7 @@
           <li><a href="#about">About</a>
           </li>
         <li><a href="#bookAnchor">Book</a></li>
-        <li><a href="#contacts">Contacts</a></li>
+        <li><a href="#">Contacts</a></li>
 
         </ul>
     </div>
@@ -32,16 +32,16 @@
 				Karolina Spa&Resort at your service
 			</div>
 			<div id="about-content">
-					<p>Наш отель предоставляет разнообразнейшие услуги, которые гарантируют вам отдых на высшем уровне.</p>
-					<p>Квалифицированный персонал, продуманная инфраструктура и забота о гостях - вот три вещи, которые делают наш отель особенным.</p>
-					<p>С нетерпением ждем вас в гости.</p>
+					Наш отель предоставляет разнообразнейшие услуги, которые гарантируют вам отдых на высшем уровне. Квалифицированный персонал, продуманная инфраструктура и забота о гостях - вот три вещи, которые делают наш отель особенным.<br/> С нетерпением ждем вас в гости.
 			</div>
 		</div>
 		
-	</div>
-	<div id="bookAnchor"></div>
-  <div class="booking">
-		
+  </div>
+  <div class="booking" id ="bookAnchor">
+		<div id = "popup">
+				<div id="popupContent">К сожалению,в одном номере может проживать не более 4х человек. Введите, пожалуйста, другое количество. <span id = 'fader'>x</span>
+					</div>	
+				</div>
     <div class="formCont">
 			<div class="stepsDisplay">
 					<div class="step">Выбор даты</div>
@@ -54,7 +54,7 @@
 					<div class="formDiv">
 						<form action="/api/pickRoom" id="dataForm">
 							<label for="firstName">Фамилия</label>
-							<input type="text" name="firstName" placeholder="Петров" required/><br/>
+							<input type="text" name="firstName" placeholder="Петров" required autofocus /><br/>
 							<label for="lastName">Имя</label>
 							<input type="text" name="lastName" placeholder="Виталий" required/><br/>
 							<label for="patr">Отчество</label>
@@ -80,7 +80,7 @@
 									<option value="2">2</option>
 									<option value="3">3</option>
 							</select>
-							<input type="submit" value="Перейти к выбору номера" class = "generalButtonStyle" />
+							<input type="submit" value="Submit" class = "generalButtonStyle" />
 							
 						</form>
 					</div>
@@ -169,7 +169,7 @@
   </div>
 
 
-  <div class="footer" id="contacts">
+  <div class="footer">
 		<div id="footerHeader">Contact us</div>
 			<form id="contactForm" name="sentMessage" >
 				<div id = "inputs"><div class="smallInputs"><div><input class="form-control" id="email" type="email" placeholder="Your Email *" required data-validation-required-message="Please enter your email address.">
@@ -187,7 +187,7 @@
 					
 								
 							
-							<button id="sendMessageButton">Send Message</button>
+							<button id="sendMessageButton" >Send Message</button>
 						
 				</form>
 	</div>
