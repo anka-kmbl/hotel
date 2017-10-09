@@ -24,6 +24,7 @@ document.getElementById('dataForm').addEventListener('submit', (e) => {
 			displayRooms(rooms);
 		})
 		.catch((err) => {
+			alert('К сожалению,в одном номере может проживать не более 4х человек. Введите, пожалуйста, другое количество.');
 			console.log(err);
 		});
 });
@@ -48,6 +49,10 @@ document.getElementById('goBackPickRooms').addEventListener('click', (e) => {
 			}
 		});
 
+});
+document.getElementById('sendMessageButton').addEventListener('click', (e) => {
+	e.preventDefault();
+	alert('Спасибо за сообщение! Оператор скоро свяжется с вами.');
 });
 document.getElementById('filterForm').addEventListener('submit', (e) => {
 	e.preventDefault();

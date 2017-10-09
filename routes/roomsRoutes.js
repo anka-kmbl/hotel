@@ -171,7 +171,7 @@ let budget = {
 	110: 0,
 	150: 110,
 	200: 150,
-	201: 10000
+	10000: 201
 };
 router.post('/', (req, res) => {
 	console.log(req.body);
